@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
+  --Blue: hsl(248, 32%, 49%);
+  --Dark-Blue: hsl(249, 10%, 26%);
+  --Grayish-Blue: hsl(246, 25%, 77%);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    background: url('./images/bg-intro-desktop.png'), var(--Red);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    padding: 2rem;
+    max-width: max(80%, 70rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header{
+    color: white;
+    width: 55%;
+    padding: 0 4rem;
+
+}
+h1{
+    font-size: 2.5rem;
+    line-height: 2.25rem;
+    margin-bottom: 1.5rem;
+}
+header p{
+    font-size: .8125rem;
+    line-height: 1.75;
+}
+.container{
+    width: 45%;
+}
+
+.free-trial{
+    display: block;
+    text-align: center;
+    background-color: var(--Blue);
+    color: white;
+    text-decoration: none;
+    font-size: .875rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 8px 0 0 hsla(0, 0%, 35%, 0.35);
+}
+.free-trial span{
+    font-weight: 600;
+}
+form{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: .5rem;
+    box-shadow: 0 8px 0 0 hsla(0, 0%, 35%, 0.35);
+}
+input{
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    border: 1px solid var(--Grayish-Blue);
+    margin-bottom: 1rem;
+    font-weight: 700;
+    position: relative;
+}
+input:focus{
+    outline: none;
+    border: 1px solid var(--Dark-Blue);
+}
+input::placeholder{
+    font-weight: 600;
+}
+.error{
+    border: 2px solid var(--Red);
+    background: url('./images/icon-error.svg');
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
+}
+.error-text{
+    color: var(--Red);
+    font-weight: 600;
+    font-size: .6rem;
+    margin: -.75rem 0 1rem;
+    text-align: right;
+    font-style: italic;
+}
+button{
+    background-color: var(--Green);
+    border: 1px solid hsl(154, 30%, 50%);
+    text-transform: uppercase;
+    font-weight: 500;
+    color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: inset 0 -3px 0 0 hsl(154, 30%, 50%);
+    cursor: pointer;
+}
+.free-trial:hover, button:hover{
+    transform: scale(1.025);
+    transition: .4s;
+}
+form p{
+    color: var(--Grayish-Blue);
+    font-size: .65rem;
+    text-align: center;
+    margin-top: .75rem;
+}
+form a{
+    text-decoration: none;
+    color: var(--Red);
+    font-weight: 700;
+}
+@media (max-width:550px){
+    main{
+        padding: 4rem 1rem 4rem;
+        flex-direction: column;
+    }
+    header, .container{
+        width: 100%;
+    }
+    header{
+        padding: 0;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    header p{
+        font-size: .875rem;
+    }
+}
